@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:mobilefinalproject/createpostspage.dart';
 import 'package:mobilefinalproject/postdetails.dart';
+// import 'package:mobilefinalproject/postdisplaypage.dart';
 import 'package:mobilefinalproject/postspage.dart';
 import 'package:web_socket_channel/io.dart';
 import 'package:web_socket_channel/status.dart' as status;
@@ -72,11 +73,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 border: OutlineInputBorder(),
                 hintText: 'Enter a user name',
               ),
-              onChanged: (String? value) {
-                setState(() {
-                  Name = value!;
-                });
-              },
+              // onChanged: (String? value) {
+              //   setState(() {
+              //     Name = value!;
+              //   });
+              // },
             ),
             TextButton(
               style: ButtonStyle(

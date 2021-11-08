@@ -12,74 +12,80 @@ class PostsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Posts Page"),
-        ),
-        body: Container(
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+      appBar: AppBar(
+        title: const Text("Posts Page"),
+      ),
+      body: Container(
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+        Container(
+          padding: const EdgeInsets.all(10),
+          child: Column(children: [
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Container(
-                padding: const EdgeInsets.all(10),
-                child: Column(children: [
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          child: Row(
-                            children: [
-                              Ink(
-                                decoration: const ShapeDecoration(
-                                  color: Colors.lightBlue,
-                                  shape: CircleBorder(),
-                                ),
-                                child: IconButton(
-                                  icon: const Icon(Icons.add_box_rounded),
-                                  color: Colors.white,
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const CreatePostPage()),
-                                    );
-                                  },
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 5,
-                              ),
-                              Ink(
-                                decoration: const ShapeDecoration(
-                                  color: Colors.lightBlue,
-                                  shape: CircleBorder(),
-                                ),
-                                child: IconButton(
-                                  icon: const Icon(Icons.settings),
-                                  color: Colors.white,
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const PostDetailsPage(
-                                                description:
-                                                    'Mobile development final projectr',
-                                                name: 'Name',
-                                                title: 'Flutter Final Project',
-                                                url: 'URL',
-                                              )),
-                                    );
-                                  },
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ]),
-                ]),
+                child: Row(
+                  children: [
+                    Ink(
+                      decoration: const ShapeDecoration(
+                        color: Colors.lightBlue,
+                        shape: CircleBorder(),
+                      ),
+                      child: IconButton(
+                        icon: const Icon(Icons.add_box_rounded),
+                        color: Colors.white,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CreatePostPage()),
+                          );
+                        },
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    Ink(
+                      decoration: const ShapeDecoration(
+                        color: Colors.lightBlue,
+                        shape: CircleBorder(),
+                      ),
+                      child: IconButton(
+                        icon: const Icon(Icons.settings),
+                        color: Colors.white,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const PostDetailsPage(
+                                      description:
+                                          'Mobile development final projectr',
+                                      name: 'Name',
+                                      title: 'Flutter Final Project',
+                                      url: 'URL',
+                                    )),
+                          );
+                        },
+                      ),
+                    ),
+                    // ListView.builder(
+                    //     padding: const EdgeInsets.all(8),
+                    //     itemCount: posts.length,
+                    //     itemBuilder:
+                    //         (BuildContext context, int index) {
+                    //       return Container(
+                    //         height: 50,
+                    //         child: (Text('${posts[index]['_id']}')),
+                    //       );
+                    //     })
+                  ],
+                ),
               ),
-            ])));
+            ]),
+          ]),
+        ),
+      ])),
+    );
   }
 }
 
@@ -176,6 +182,16 @@ class _MyHomePageState extends State<PostPage> {
                                   },
                                 ),
                               ),
+                              // ListView.builder(
+                              //     padding: const EdgeInsets.all(8),
+                              //     itemCount: posts.length,
+                              //     itemBuilder:
+                              //         (BuildContext context, int index) {
+                              //       return Container(
+                              //         height: 50,
+                              //         child: (Text('${posts[index]['_id']}')),
+                              //       );
+                              //     })
                             ],
                           ),
                         ),
